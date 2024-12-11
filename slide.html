@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .slidebox {
+            border-radius: 10px;
+            margin: 50px auto;
+            width: 800px;
+            height: 500px;
+             background-image: url('https://images.pexels.com/photos/9888316/pexels-photo-9888316.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+          object-fit: cover;
+            border: 2px solid #ea0404;
+        }
+
+        .btn {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            gap: 20px;
+        }
+
+        button {
+            width: 150px;
+            justify-content: space-between;
+            padding: 10px 20px;
+           border-radius: 8px;
+            background-color: black;
+            border: 0px;
+            color: aliceblue;
+            font-size: 20px;
+            text-align: center;
+            outline: 2px solid #ea0404;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="btn">
+        <button class="up">Side Up</button>
+        <button class="down">Side Down</button>
+        <button class="toggle">Side Toggle</button>
+    </div>
+
+    <div class="slidebox">
+    </div>
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        const slidebox = $('.slidebox');
+
+        $('.up').click(() => {
+            slidebox.slideUp(300);
+        })
+
+
+        $('.down').click(() => {
+            slidebox.slideDown(300);
+        })
+
+
+        $('.toggle').click(() => {
+            slidebox.slideToggle(300);
+        })
+    </script>
+
+
+</body>
+
+</html>
